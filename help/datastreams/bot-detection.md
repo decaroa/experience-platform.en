@@ -25,7 +25,7 @@ This bot scoring helps the solutions receiving the request correctly identify bo
 
 >[!IMPORTANT]
 >
->Bot detection does not drop any bot requests. It only updates the XDM schema with the bot scoring, and forwards the event to the [datastream service](configure.md) which you configured.
+>Bot detection rules do not drop any bot requests. It only updates the bot scoring field value of the botDetection field group, and forwards the event to the [datastream service](configure.md) which you configured. The botDetection field group must be added to the XDM schemas.
 >
 >Adobe solutions may handle bot scoring in different ways. For example, Adobe Analytics uses its own [bot filtering service](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) and does not use the score set by the Edge Network. The two services use the same [IAB bot list](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), so the bot scoring is identical.
 
